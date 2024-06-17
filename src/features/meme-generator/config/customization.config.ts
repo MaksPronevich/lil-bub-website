@@ -88,6 +88,11 @@ import front30 from "../assets/img/front/30.png";
 import front31 from "../assets/img/front/31.png";
 import front32 from "../assets/img/front/32.png";
 import front33 from "../assets/img/front/33.png";
+import front34 from "../assets/img/front/34.png";
+import front35 from "../assets/img/front/35.png";
+import front36 from "../assets/img/front/36.png";
+import front37 from "../assets/img/front/37.png";
+import front38 from "../assets/img/front/38.png";
 import bg1 from "../assets/img/backgrounds/1.png";
 import bg2 from "../assets/img/backgrounds/2.png";
 import bg3 from "../assets/img/backgrounds/3.png";
@@ -219,6 +224,11 @@ export const customizationConfig = [
       front31,
       front32,
       front33,
+      front34,
+      front35,
+      front36,
+      front37,
+      front38,
     ],
   },
 ];
