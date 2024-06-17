@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "icons";
+  src: url("/fonts/icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class*="_icon-"]::before {
+  font-family: "icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+._icon-close:before {
+  content: "\e908" !important;
+}
+._icon-chevron:before {
+  content: "\e907" !important;
+}
+._icon-copy:before {
+  content: "\e900" !important;
+}
+._icon-dextools:before {
+  content: "\e901" !important;
+}
+._icon-download:before {
+  content: "\e902" !important;
+}
+._icon-random:before {
+  content: "\e903" !important;
+}
+._icon-refresh:before {
+  content: "\e904" !important;
+}
+._icon-telegram:before {
+  content: "\e905" !important;
+}
+._icon-x:before {
+  content: "\e906" !important;
+}
