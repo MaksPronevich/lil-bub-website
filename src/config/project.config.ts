@@ -1,7 +1,7 @@
 export const projectConfig = {
   address: "0xf3b9569F82B18aEf890De263B84189bd345616722",
   byuLinkUrl: "",
-  tokenAllocation: 222222222222,
+  tokenAllocation: 1000000000,
   socials: [
     { name: "x", linkUrl: "https://x.com/lilbubcoin" },
     { name: "telegram", linkUrl: "https://t.me/lilbubcoin_portal" },
