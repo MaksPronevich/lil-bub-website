@@ -46,7 +46,7 @@ export const Mission: FC = () => {
             <br />
             <p>
               To prove the charitable power of the Solana community, for every Marketcap milestone 50M, 100M, 200M,
-              500M, 1B, and 2B, Lil BUB will donate to animal shelters and sanctuaries that help save animal lives
+              500M, 1B, and 2B, LIL BUB will donate to animal shelters and sanctuaries that help save animal lives
               worldwide.
             </p>
           </div>

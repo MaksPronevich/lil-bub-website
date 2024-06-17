@@ -16,7 +16,7 @@ export const Home: FC = () => {
       <div className="mx-auto flex min-h-screen min-w-0 max-w-[1748px] flex-col items-center justify-between gap-x-16 px-6 lg:flex-row">
         <div className="exclude-class relative w-full min-w-0 max-w-[660px] pt-[200px] lg:w-auto lg:py-[200px]">
           <h1 className="mb-6 text-center text-5xl font-semibold md:text-6xl lg:text-left xl:text-7xl 3xl:text-[92px]/[100px]">
-            Meet Lil BUB on Solana
+            Meet LIL BUB on Solana
           </h1>
           <div className="relative flex h-14 min-w-0 items-center gap-4 rounded-full border bg-white/10">
             <button
@@ -31,7 +31,7 @@ export const Home: FC = () => {
             )}
           </div>
           <p className="my-6 text-center text-sm lg:text-left lg:text-base">
-            Meet Lil BUB, the adorable princess who captured hearts worldwide. Now setting her paws on Solana.
+            Meet LIL BUB, the adorable princess who captured hearts worldwide. Now setting her paws on Solana.
           </p>
           <LinkButton href={byuLinkUrl} className="mb-6" width="full" openInNewTab>
             Buy Here

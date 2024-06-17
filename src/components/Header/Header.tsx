@@ -16,7 +16,7 @@ export const Header: FC = () => {
             />
             <img className="absolute left-1/2 top-0 w-[80%] -translate-x-1/2" alt="Lil BUB" src={logo} />
           </div>
-          <span className="hidden text-5xl font-bold lg:inline-flex">Lil BUB</span>
+          <span className="hidden text-5xl font-bold lg:inline-flex">LIL BUB</span>
         </Link>
       </div>
     </header>

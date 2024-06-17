@@ -33,7 +33,7 @@ export const Tokenomics: FC = () => {
           <div>
             <div className="mb-3 flex flex-col">
               <span className="text-xl font-bold">Token Allocation:</span>
-              <span>The total Supply of Lil BUB is</span>
+              <span>The total Supply of LIL BUB is</span>
             </div>
             <div className="text-2xl font-bold sm:text-3xl md:text-5xl">
               <CountUp end={tokenAllocation} enableScrollSpy scrollSpyOnce duration={4} />
