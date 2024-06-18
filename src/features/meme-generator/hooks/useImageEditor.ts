@@ -10,10 +10,18 @@ type UploadedImage = {
 type State = {
   inputValue: string;
   uploadedImages: UploadedImage[];
+  text: {
+    size: { width: number; height: number };
+    position: { x: number; y: number };
+  };
 };
 
 export const useImageEditor = (onResetImage: () => void, onGenerateRandomImage: () => void) => {
-  const [state, setState] = useMergeState<State>({ inputValue: "", uploadedImages: [] });
+  const [state, setState] = useMergeState<State>({
+    inputValue: "",
+    uploadedImages: [],
+    text: { size: { width: 250, height: 150 }, position: { x: 200, y: 300 } },
+  });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleInputValue = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -81,6 +89,24 @@ export const useImageEditor = (onResetImage: () => void, onGenerateRandomImage: 
     });
   };
 
+  const updateTextSize = (size: { width: number; height: number }): void => {
+    setState((prevState) => ({
+      text: {
+        ...prevState.text,
+        size,
+      },
+    }));
+  };
+
+  const updateTextPosition = (position: { x: number; y: number }): void => {
+    setState((prevState) => ({
+      text: {
+        ...prevState.text,
+        position,
+      },
+    }));
+  };
+
   const removeUploadedImage = (index: number): void => {
     setState((prev) => {
       const newUploadedImages = [...prev.uploadedImages];
@@ -110,5 +136,7 @@ export const useImageEditor = (onResetImage: () => void, onGenerateRandomImage: 
     updateImagePosition,
     removeUploadedImage,
     handleInputClick,
+    updateTextPosition,
+    updateTextSize,
   };
 };

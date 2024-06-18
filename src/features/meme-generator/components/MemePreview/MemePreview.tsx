@@ -24,6 +24,8 @@ export const MemePreview: FC<MemePreviewProps> = ({ images, onResetImage, onGene
     updateImagePosition,
     removeUploadedImage,
     handleInputClick,
+    updateTextPosition,
+    updateTextSize,
   } = useImageEditor(onResetImage, onGenerateRandomImage);
 
   return (
@@ -61,9 +63,38 @@ export const MemePreview: FC<MemePreviewProps> = ({ images, onResetImage, onGene
             </div>
           </Rnd>
         ))}
-        <div className="absolute bottom-[25px] left-2 right-2 z-[120] text-center text-3xl font-bold tracking-tighter text-white [-webkit-text-stroke:2px_#000] md:text-5xl">
-          {state.inputValue}
-        </div>
+        {state.inputValue.length > 0 && (
+          <Rnd
+            enableResizing={{
+              top: true,
+              right: true,
+              bottom: true,
+              left: true,
+              topRight: false,
+              bottomRight: false,
+              bottomLeft: false,
+              topLeft: false,
+            }}
+            onResizeStop={(e, direction, ref, delta, position) => {
+              updateTextSize({
+                width: parseInt(ref.style.width),
+                height: parseInt(ref.style.height),
+              });
+              updateTextPosition(position);
+            }}
+            className="z-[120] !flex items-center justify-center overflow-hidden border border-white/0 hover:border-white"
+            onDragStop={(e, d) => {
+              updateTextPosition({ x: d.x, y: d.y });
+            }}
+            size={{ width: state.text.size.width, height: state.text.size.height }}
+            position={{ x: state.text.position.x, y: state.text.position.y }}
+            bounds="parent"
+          >
+            <div className="text-center text-3xl font-bold tracking-tighter text-white [-webkit-text-stroke:2px_#000] md:text-5xl">
+              {state.inputValue}
+            </div>
+          </Rnd>
+        )}
       </div>
       <div className="mt-6 flex flex-col gap-3">
         <>
