@@ -82,16 +82,18 @@ export const MemePreview: FC<MemePreviewProps> = ({ images, onResetImage, onGene
               });
               updateTextPosition(position);
             }}
-            className="z-[120] !flex items-center justify-center overflow-hidden border border-white/0 hover:border-white"
             onDragStop={(e, d) => {
               updateTextPosition({ x: d.x, y: d.y });
             }}
             size={{ width: state.text.size.width, height: state.text.size.height }}
             position={{ x: state.text.position.x, y: state.text.position.y }}
+            className="z-[120] border border-white/0 hover:border-white"
             bounds="parent"
           >
-            <div className="text-center text-3xl font-bold tracking-tighter text-white [-webkit-text-stroke:2px_#000] md:text-5xl">
-              {state.inputValue}
+            <div className="relative h-full w-full">
+              <div className="text-center text-3xl font-bold tracking-tighter text-white [-webkit-text-stroke:2px_#000] md:text-5xl">
+                {state.inputValue}
+              </div>
             </div>
           </Rnd>
         )}

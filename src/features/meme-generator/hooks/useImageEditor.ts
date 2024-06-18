@@ -11,7 +11,7 @@ type State = {
   inputValue: string;
   uploadedImages: UploadedImage[];
   text: {
-    size: { width: number; height: number };
+    size: { width: number | string; height: number | string };
     position: { x: number; y: number };
   };
 };
@@ -20,7 +20,7 @@ export const useImageEditor = (onResetImage: () => void, onGenerateRandomImage: 
   const [state, setState] = useMergeState<State>({
     inputValue: "",
     uploadedImages: [],
-    text: { size: { width: 250, height: 150 }, position: { x: 200, y: 300 } },
+    text: { size: { width: "auto", height: "auto" }, position: { x: 0, y: 0 } },
   });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -89,7 +89,7 @@ export const useImageEditor = (onResetImage: () => void, onGenerateRandomImage: 
     });
   };
 
-  const updateTextSize = (size: { width: number; height: number }): void => {
+  const updateTextSize = (size: { width: number | string; height: number | string }): void => {
     setState((prevState) => ({
       text: {
         ...prevState.text,
