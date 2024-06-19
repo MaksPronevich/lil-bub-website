@@ -38,7 +38,7 @@ export const useMemeGenerator = (): UseMemeGenerator => {
       head: Image.getRandomImage("head", 10),
       hat: Image.getRandomImage("hat", 12),
       glasses: Image.getRandomImage("glasses", 13),
-      flag: Image.getRandomImage("flag", 20),
+      flag: Image.getRandomImage("flag", 21),
       back: Image.getImage("back", 0),
       front: Image.getImage("front", 0),
     };

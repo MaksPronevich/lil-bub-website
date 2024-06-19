@@ -63,6 +63,7 @@ import flag16 from "../assets/img/flags/16.png";
 import flag17 from "../assets/img/flags/17.png";
 import flag18 from "../assets/img/flags/18.png";
 import flag19 from "../assets/img/flags/19.png";
+import flag20 from "../assets/img/flags/20.png";
 import head10 from "../assets/img/heads/10.png";
 import front10 from "../assets/img/front/10.png";
 import front11 from "../assets/img/front/11.png";
@@ -166,6 +167,7 @@ export const customizationConfig = [
       flag4,
       flag5,
       flag6,
+      flag20,
       flag7,
       flag8,
       flag9,
